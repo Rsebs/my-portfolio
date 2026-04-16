@@ -36,15 +36,23 @@ const experiences = ref<Experience[]>([
   {
     title: 'Desarrollador de software fullstack',
     company: 'Psicol SA',
-    date: 'Diciembre 2024 - Actualidad',
+    date: 'Diciembre 2023 - Abril 2026',
     description:
       'Principalmente dando mantenimiento a un sistema legacy en PHP puro y también desarrollando proyectos API en PHP Laravel con conexión a un frontend en Vue.js.',
     color: 'purple',
   },
   {
+    title: 'Desarrollador Pasante',
+    company: 'Neurológico de Colombia',
+    date: 'Marzo 2023 - Noviembre 2023',
+    description:
+      'Desarrollo de aplicaciones con JAVA Spring Boot. Realizando mantenimiento a sistemas legacy y desarrollando nuevas funcionalidades.',
+    color: 'blue',
+  },
+  {
     title: 'Desarrollador Web Freelance',
     company: 'Independiente',
-    date: 'Enero 2023 - Noviembre 2024',
+    date: 'Enero 2023 - Diciembre 2023',
     description:
       'Desarrollo de aplicaciones web personalizadas y sitios corporativos. Especializado en la creación de interfaces responsivas con Vue.js y consumo de APIs REST.',
     color: 'green',

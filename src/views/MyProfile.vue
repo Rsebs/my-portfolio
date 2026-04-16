@@ -6,7 +6,9 @@
     <v-col cols="12" md="10">
       <div class="d-flex flex-column justify-space-between h-100 ga-3">
         <h1 class="text-h3 font-weight-bold">Sebastián Ruiz J.</h1>
-        <p class="text-h6"><v-icon icon="mdi-developer-board" /> Desarrollador de software</p>
+        <p class="text-h6">
+          <v-icon icon="mdi-developer-board" /> Desarrollador fullstack de software
+        </p>
         <p><v-icon icon="mdi-map-marker" /> Medellín, Colombia</p>
 
         <div class="d-flex ga-2" :class="{ 'flex-wrap': $vuetify.display.mobile }">
@@ -31,7 +33,7 @@ import type { ChipComponentProps } from '@/components/ui/props/ChipComponentProp
 import ChipComponent from '@/components/ui/ChipComponent.vue'
 
 import cv from '@/assets/documents/cv_rsebs.pdf'
-import myPhoto from '@/assets/img/my-photo.jpg'
+import myPhoto from '@/assets/img/my-photo.png'
 
 const chipsInfo: ChipComponentProps[] = [
   {

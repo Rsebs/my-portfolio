@@ -2,6 +2,9 @@
   <h2>Proyectos</h2>
 
   <div class="my-4">
+    <v-card class="mb-8 pa-4 bg-transparent" elevation="0">
+      <v-card-title>Próximamente...</v-card-title>
+    </v-card>
     <v-card
       v-for="(project, i) in projects"
       :key="i"
@@ -100,30 +103,30 @@ interface Project {
 }
 
 const projects = ref<Project[]>([
-  {
-    title: 'Software random',
-    subtitle: 'Hazte rico y más rico',
-    description: 'Software para vender productos.',
-    icon: 'mdi-chart-bar',
-    color: 'primary',
-    technologies: [
-      { text: 'PHP', icon: 'mdi-language-php', color: 'secondary' },
-      { text: 'Laravel', icon: 'mdi-language-php', color: 'secondary' },
-    ],
-    deployLink: 'https://example.com',
-    githubLink: 'https://github.com',
-    image: 'https://picsum.photos/id/1/800/450',
-  },
-  {
-    title: 'Ecommerce random',
-    subtitle: 'Tienda virtual',
-    description: 'Ecommerce para vender productos.',
-    icon: 'mdi-bug',
-    color: 'primary',
-    technologies: [{ text: 'Vue JS', icon: 'mdi-vuejs', color: 'secondary' }],
-    deployLink: 'https://example.com',
-    githubLink: 'https://github.com',
-    image: 'https://picsum.photos/id/2/800/450',
-  },
+  // {
+  //   title: 'Software random',
+  //   subtitle: 'Hazte rico y más rico',
+  //   description: 'Software para vender productos.',
+  //   icon: 'mdi-chart-bar',
+  //   color: 'primary',
+  //   technologies: [
+  //     { text: 'PHP', icon: 'mdi-language-php', color: 'secondary' },
+  //     { text: 'Laravel', icon: 'mdi-language-php', color: 'secondary' },
+  //   ],
+  //   deployLink: 'https://example.com',
+  //   githubLink: 'https://github.com',
+  //   image: 'https://picsum.photos/id/1/800/450',
+  // },
+  // {
+  //   title: 'Ecommerce random',
+  //   subtitle: 'Tienda virtual',
+  //   description: 'Ecommerce para vender productos.',
+  //   icon: 'mdi-bug',
+  //   color: 'primary',
+  //   technologies: [{ text: 'Vue JS', icon: 'mdi-vuejs', color: 'secondary' }],
+  //   deployLink: 'https://example.com',
+  //   githubLink: 'https://github.com',
+  //   image: 'https://picsum.photos/id/2/800/450',
+  // },
 ])
 </script>

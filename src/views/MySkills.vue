@@ -17,6 +17,12 @@ import ChipComponent from '@/components/ui/ChipComponent.vue'
 const sizeChip = 'x-large'
 const chipsTechnologies: ChipComponentProps[] = [
   {
+    text: 'Microsoft Azure',
+    icon: 'mdi-cloud',
+    color: 'blue',
+    size: sizeChip,
+  },
+  {
     text: 'PHP',
     icon: 'mdi-language-php',
     color: 'purple',
@@ -53,6 +59,24 @@ const chipsTechnologies: ChipComponentProps[] = [
     size: sizeChip,
   },
   {
+    text: 'Python',
+    icon: 'mdi-language-python',
+    color: 'yellow',
+    size: sizeChip,
+  },
+  {
+    text: 'Java',
+    icon: 'mdi-language-java',
+    color: 'orange',
+    size: sizeChip,
+  },
+  {
+    text: 'Spring Boot',
+    icon: 'mdi-language-css3',
+    color: 'green',
+    size: sizeChip,
+  },
+  {
     text: 'HTML',
     icon: 'mdi-language-html5',
     color: 'orange',
@@ -71,9 +95,27 @@ const chipsTechnologies: ChipComponentProps[] = [
     size: sizeChip,
   },
   {
+    text: 'MySQL',
+    icon: 'mdi-database',
+    color: 'blue',
+    size: sizeChip,
+  },
+  {
+    text: 'PostgreSQL',
+    icon: 'mdi-database',
+    color: 'blue',
+    size: sizeChip,
+  },
+  {
+    text: 'MongoDB',
+    icon: 'mdi-leaf',
+    color: 'green',
+    size: sizeChip,
+  },
+  {
     text: 'Git',
     icon: 'mdi-git',
-    color: 'orange',
+    color: 'red',
     size: sizeChip,
   },
   {

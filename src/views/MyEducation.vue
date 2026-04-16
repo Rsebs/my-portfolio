@@ -40,6 +40,12 @@ interface Education {
 
 const educationList = ref<Education[]>([
   {
+    school: 'Universidad Pascual Bravo',
+    degree: 'Tecnólogo en Análisis y Desarrollo de Software',
+    description: 'Desarrollo en C#, Python, SQL. En curso',
+    icon: 'mdi-school',
+  },
+  {
     school: 'Politécnico Mayor',
     degree: 'Técnico en Desarrollo de Software',
     description: 'Desarrollo de software con Java, Spring Boot, Python y JavaScript.',
