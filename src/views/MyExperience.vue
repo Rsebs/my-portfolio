@@ -13,7 +13,7 @@
           <div class="font-weight-normal">
             <strong>{{ experience.title }}</strong> @ {{ experience.company }}
           </div>
-          <div class="text-caption text-grey">{{ experience.date }}</div>
+          <div v-if="experience.date" class="text-caption text-grey">{{ experience.date }}</div>
           <div class="mt-2">{{ experience.description }}</div>
         </div>
       </v-timeline-item>
@@ -27,7 +27,7 @@ import { ref } from 'vue'
 interface Experience {
   title: string
   company: string
-  date: string
+  date?: string
   description: string
   color: string
 }
@@ -52,7 +52,6 @@ const experiences = ref<Experience[]>([
   {
     title: 'Desarrollador Web Freelance',
     company: 'Independiente',
-    date: 'Enero 2023 - Diciembre 2023',
     description:
       'Desarrollo de aplicaciones web personalizadas y sitios corporativos. Especializado en la creación de interfaces responsivas con Vue.js y consumo de APIs REST.',
     color: 'green',

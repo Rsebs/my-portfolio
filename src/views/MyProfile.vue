@@ -1,14 +1,12 @@
 <template>
   <v-row class="align-center">
     <v-col cols="12" md="2">
-      <v-img :width="200" aspect-ratio="1/1" cover :src="myPhoto" class="rounded-circle" />
+      <v-img :width="200" aspect-ratio="1" cover :src="myPhoto" class="rounded-circle" />
     </v-col>
     <v-col cols="12" md="10">
       <div class="d-flex flex-column justify-space-between h-100 ga-3">
         <h1 class="text-h3 font-weight-bold">Sebastián Ruiz J.</h1>
-        <p class="text-h6">
-          <v-icon icon="mdi-developer-board" /> Desarrollador fullstack de software
-        </p>
+        <p class="text-h6"><v-icon icon="mdi-code-json" /> Desarrollador fullstack de software</p>
         <p><v-icon icon="mdi-map-marker" /> Medellín, Colombia</p>
 
         <div class="d-flex ga-2" :class="{ 'flex-wrap': $vuetify.display.mobile }">
