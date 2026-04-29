@@ -19,9 +19,10 @@
   <section class="my-9">
     <h2>Sobre mí</h2>
     <p class="mt-2">
-      Soy un programador inquieto con una doble vida, ya que trabajo en una prestigiosa empresa de
-      software pero también he cometido todos los crímenes informáticos que existen. Tengo la
-      sensación de que nada es lo que parece ser.
+      Soy un desarrollador Full Stack apasionado por descifrar lo que ocurre detrás de cada línea de
+      código. Mi día a día transcurre construyendo soluciones robustas en entornos corporativos de
+      alto nivel. Me gusta pensar que en el software, al igual que en la realidad, nada es lo que
+      parece y siempre hay una capa más profunda por optimizar.
     </p>
   </section>
 </template>
