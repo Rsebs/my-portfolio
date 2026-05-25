@@ -1,5 +1,5 @@
 <template>
-  <h2>Tecnologías</h2>
+  <h2>{{ $t('technologies') }}</h2>
 
   <div class="my-4">
     <v-row align-content="center" justify="start">

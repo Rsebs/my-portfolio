@@ -6,23 +6,33 @@
     <v-col cols="12" md="10">
       <div class="d-flex flex-column justify-space-between h-100 ga-3">
         <h1 class="text-h3 font-weight-bold">Sebastián Ruiz J.</h1>
-        <p class="text-h6"><v-icon icon="mdi-code-json" /> Desarrollador fullstack de software</p>
+        <p class="text-h6">
+          <v-icon icon="mdi-code-json" /> {{ $t('developer_full_stack_of_software') }}
+        </p>
         <p><v-icon icon="mdi-map-marker" /> Medellín, Colombia</p>
 
-        <div class="d-flex ga-2" :class="{ 'flex-wrap': $vuetify.display.mobile }">
+        <div class="d-flex ga-2 align-center" :class="{ 'flex-wrap': $vuetify.display.mobile }">
           <ChipComponent v-for="(chip, index) in chipsInfo" :key="index" v-bind="chip" />
+          
+          <v-btn
+            variant="tonal"
+            color="primary"
+            prepend-icon="mdi-translate"
+            size="small"
+            class="text-none rounded-pill ml-2"
+            @click="toggleLanguage"
+          >
+            {{ locale === 'es' ? 'English' : 'Español' }}
+          </v-btn>
         </div>
       </div>
     </v-col>
   </v-row>
 
   <section class="my-9">
-    <h2>Sobre mí</h2>
+    <h2>{{ $t('about_me') }}</h2>
     <p class="mt-2">
-      Soy un desarrollador Full Stack apasionado por descifrar lo que ocurre detrás de cada línea de
-      código. Mi día a día transcurre construyendo soluciones robustas en entornos corporativos de
-      alto nivel. Me gusta pensar que en el software, al igual que en la realidad, nada es lo que
-      parece y siempre hay una capa más profunda por optimizar.
+      {{ $t('about_me_description') }}
     </p>
   </section>
 </template>
@@ -30,9 +40,17 @@
 <script setup lang="ts">
 import type { ChipComponentProps } from '@/components/ui/props/ChipComponentProps'
 import ChipComponent from '@/components/ui/ChipComponent.vue'
+import { useI18n } from 'vue-i18n'
 
 import cv from '@/assets/documents/cv_rsebs.pdf'
 import myPhoto from '@/assets/img/my-photo.png'
+
+const { locale } = useI18n()
+
+const toggleLanguage = () => {
+  locale.value = locale.value === 'es' ? 'en' : 'es'
+  localStorage.setItem('portfolio_lang', locale.value)
+}
 
 const chipsInfo: ChipComponentProps[] = [
   {

@@ -1,5 +1,5 @@
 <template>
-  <h2>Formación</h2>
+  <h2>{{ $t('education') }}</h2>
 
   <div class="my-4">
     <v-list bg-color="transparent" lines="two">
@@ -17,11 +17,11 @@
         </v-list-item-title>
 
         <v-list-item-subtitle class="text-body-1 text-high-emphasis mb-1">
-          {{ item.degree }}
+          {{ $t(item.degreeKey) }}
         </v-list-item-subtitle>
 
         <v-list-item-subtitle class="text-body-2 text-medium-emphasis">
-          {{ item.description }}
+          {{ $t(item.descriptionKey) }}
         </v-list-item-subtitle>
       </v-list-item>
     </v-list>
@@ -33,22 +33,22 @@ import { ref } from 'vue'
 
 interface Education {
   school: string
-  degree: string
-  description: string
+  degreeKey: string
+  descriptionKey: string
   icon: string
 }
 
 const educationList = ref<Education[]>([
   {
     school: 'Universidad Pascual Bravo',
-    degree: 'Tecnólogo en Análisis y Desarrollo de Software',
-    description: 'Desarrollo en C#, Python, SQL. En curso',
+    degreeKey: 'education_degree_pascual',
+    descriptionKey: 'education_desc_pascual',
     icon: 'mdi-school',
   },
   {
     school: 'Politécnico Mayor',
-    degree: 'Técnico en Desarrollo de Software',
-    description: 'Desarrollo de software con Java, Spring Boot, Python y JavaScript.',
+    degreeKey: 'education_degree_politecnico',
+    descriptionKey: 'education_desc_politecnico',
     icon: 'mdi-bag-personal',
   },
 ])

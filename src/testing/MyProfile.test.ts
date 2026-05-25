@@ -2,9 +2,10 @@ import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 
 import vuetify from '@/plugins/vuetify'
+import i18n from '@/plugins/i18n'
 import MyProfile from '@/views/MyProfile.vue'
 
-const createWrapper = () => mount(MyProfile, { global: { plugins: [vuetify] } })
+const createWrapper = () => mount(MyProfile, { global: { plugins: [vuetify, i18n] } })
 
 describe('MyProfile', () => {
   // it = individual test case

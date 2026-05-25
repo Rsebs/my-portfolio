@@ -1,5 +1,5 @@
 <template>
-  <h2>Proyectos</h2>
+  <h2>{{ $t('projects') }}</h2>
 
   <div class="my-4">
     <v-card
@@ -17,12 +17,12 @@
             </v-avatar>
             <div>
               <h3 class="text-h5 font-weight-bold">{{ project.title }}</h3>
-              <div class="text-subtitle-1 text-grey">{{ project.subtitle }}</div>
+              <div class="text-subtitle-1 text-grey">{{ $t(project.subtitleKey) }}</div>
             </div>
           </div>
 
           <div class="text-body-1 mb-4">
-            {{ project.description }}
+            {{ $t(project.descriptionKey) }}
           </div>
 
           <div class="d-flex flex-wrap gap-2 mb-4">
@@ -40,7 +40,7 @@
             <v-tooltip
               v-for="(link, i) in project.links"
               :key="i"
-              :text="link.title"
+              :text="$t(link.titleKey)"
               location="bottom"
             >
               <template v-slot:activator="{ props }">
@@ -91,15 +91,15 @@ import sociisoftImg from '@/assets/img/projects/sociisoft.png'
 import { ref } from 'vue'
 
 interface ProjectLink {
-  title: string
+  titleKey: string
   icon: string
   href: string
 }
 
 interface Project {
   title: string
-  subtitle: string
-  description: string
+  subtitleKey: string
+  descriptionKey: string
   icon: string
   color: string
   technologies: ChipComponentProps[]
@@ -110,9 +110,8 @@ interface Project {
 const projects = ref<Project[]>([
   {
     title: 'Booknest',
-    subtitle: 'Ecommerce de libros',
-    description:
-      'Plataforma ecommerce de libros con arquitectura desacoplada (Vue 3 + Laravel API), que permite a usuarios gestionar publicaciones, compras y catálogo en tiempo real. Implementa autenticación, control de roles y persistencia en MySQL.',
+    subtitleKey: 'project_subtitle_booknest',
+    descriptionKey: 'project_desc_booknest',
     icon: 'mdi-bookshelf',
     color: 'primary',
     technologies: [
@@ -126,15 +125,15 @@ const projects = ref<Project[]>([
       {
         icon: 'mdi-link',
         href: 'https://booknestrsebs.netlify.app',
-        title: 'Url despliegue',
+        titleKey: 'project_link_deploy',
       },
       {
-        title: 'Codigo frontend',
+        titleKey: 'project_link_front',
         icon: 'mdi-github',
         href: 'https://github.com/Rsebs/booknest-front',
       },
       {
-        title: 'Codigo backend',
+        titleKey: 'project_link_back',
         icon: 'mdi-github',
         href: 'https://github.com/Rsebs/booknest-api',
       },
@@ -143,9 +142,8 @@ const projects = ref<Project[]>([
   },
   {
     title: 'Sociisoft',
-    subtitle: 'Landing page para casa de software',
-    description:
-      'Landing page corporativa orientada a conversión para una casa de software, enfocada en presentar servicios, generar confianza y captar clientes. Desarrollada con Astro priorizando rendimiento, SEO y carga rápida.',
+    subtitleKey: 'project_subtitle_sociisoft',
+    descriptionKey: 'project_desc_sociisoft',
     icon: 'mdi-code-tags',
     color: 'primary',
     technologies: [{ text: 'Astro', icon: 'mdi-rocket-launch', color: 'secondary' }],
@@ -153,7 +151,7 @@ const projects = ref<Project[]>([
       {
         href: 'https://sociisoft.com',
         icon: 'mdi-link',
-        title: 'Url despliegue',
+        titleKey: 'project_link_deploy',
       },
     ],
     image: sociisoftImg,

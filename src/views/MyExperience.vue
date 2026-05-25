@@ -1,5 +1,5 @@
 <template>
-  <h2>Experiencia</h2>
+  <h2>{{ $t('experience') }}</h2>
 
   <div class="my-4">
     <v-timeline align="start" density="compact">
@@ -11,10 +11,10 @@
       >
         <div class="mb-4">
           <div class="font-weight-normal">
-            <strong>{{ experience.title }}</strong> @ {{ experience.company }}
+            <strong>{{ $t(experience.titleKey) }}</strong> @ {{ experience.companyKey ? $t(experience.companyKey) : experience.company }}
           </div>
-          <div v-if="experience.date" class="text-caption text-grey">{{ experience.date }}</div>
-          <div class="mt-2">{{ experience.description }}</div>
+          <div v-if="experience.dateKey" class="text-caption text-grey">{{ $t(experience.dateKey) }}</div>
+          <div class="mt-2">{{ $t(experience.descriptionKey) }}</div>
         </div>
       </v-timeline-item>
     </v-timeline>
@@ -25,35 +25,33 @@
 import { ref } from 'vue'
 
 interface Experience {
-  title: string
-  company: string
-  date?: string
-  description: string
+  titleKey: string
+  companyKey?: string
+  company?: string
+  dateKey?: string
+  descriptionKey: string
   color: string
 }
 
 const experiences = ref<Experience[]>([
   {
-    title: 'Desarrollador de software fullstack',
+    titleKey: 'experience_title_psicol',
     company: 'Psicol SA',
-    date: 'Diciembre 2023 - Abril 2026',
-    description:
-      'Principalmente dando mantenimiento a un sistema legacy en PHP puro y también desarrollando proyectos API en PHP Laravel con conexión a un frontend en Vue.js.',
+    dateKey: 'experience_date_psicol',
+    descriptionKey: 'experience_desc_psicol',
     color: 'purple',
   },
   {
-    title: 'Desarrollador Pasante',
+    titleKey: 'experience_title_neurologico',
     company: 'Neurológico de Colombia',
-    date: 'Marzo 2023 - Noviembre 2023',
-    description:
-      'Desarrollo de aplicaciones con JAVA Spring Boot. Realizando mantenimiento a sistemas legacy y desarrollando nuevas funcionalidades.',
+    dateKey: 'experience_date_neurologico',
+    descriptionKey: 'experience_desc_neurologico',
     color: 'blue',
   },
   {
-    title: 'Desarrollador Web Freelance',
-    company: 'Independiente',
-    description:
-      'Desarrollo de aplicaciones web personalizadas y sitios corporativos. Especializado en la creación de interfaces responsivas con Vue.js y consumo de APIs REST.',
+    titleKey: 'experience_title_freelance',
+    companyKey: 'experience_company_freelance',
+    descriptionKey: 'experience_desc_freelance',
     color: 'green',
   },
 ])
