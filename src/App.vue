@@ -160,7 +160,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import MyProfile from '@/views/MyProfile.vue'
@@ -173,6 +173,7 @@ import ChipComponent from '@/components/ui/ChipComponent.vue'
 import type { ChipComponentProps } from './components/ui/props/ChipComponentProps'
 
 import cv from '@/assets/documents/cv_rsebs.pdf'
+import cv_english from '@/assets/documents/cv_rsebs_english.pdf'
 
 const { locale } = useI18n()
 
@@ -234,7 +235,7 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-const chipsInfo: ChipComponentProps[] = [
+const chipsInfo = computed<ChipComponentProps[]>(() => [
   {
     icon: 'mdi-email',
     text: 'sebastiantianruizj2014@gmail.com',
@@ -246,7 +247,7 @@ const chipsInfo: ChipComponentProps[] = [
   {
     icon: 'mdi-file-document',
     variant: 'outlined',
-    href: cv,
+    href: locale.value === 'es' ? cv : cv_english,
     target: '_blank',
     color: 'secondary',
   },
@@ -264,7 +265,7 @@ const chipsInfo: ChipComponentProps[] = [
     target: '_blank',
     color: 'primary',
   },
-]
+])
 </script>
 
 <style scoped>

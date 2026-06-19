@@ -57,9 +57,15 @@ import type { ChipComponentProps } from '@/components/ui/props/ChipComponentProp
 import ChipComponent from '@/components/ui/ChipComponent.vue'
 
 import cv from '@/assets/documents/cv_rsebs.pdf'
+import cv_english from '@/assets/documents/cv_rsebs_english.pdf'
 import myPhoto from '@/assets/img/my-photo.png'
 
-const chipsInfo: ChipComponentProps[] = [
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+
+const { locale } = useI18n()
+
+const chipsInfo = computed<ChipComponentProps[]>(() => [
   {
     icon: 'mdi-email',
     text: 'sebastiantianruizj2014@gmail.com',
@@ -71,7 +77,7 @@ const chipsInfo: ChipComponentProps[] = [
   {
     icon: 'mdi-file-document',
     variant: 'outlined',
-    href: cv,
+    href: locale.value === 'es' ? cv : cv_english,
     target: '_blank',
     color: 'secondary',
   },
@@ -89,7 +95,7 @@ const chipsInfo: ChipComponentProps[] = [
     target: '_blank',
     color: 'primary',
   },
-]
+])
 </script>
 
 <style scoped>
