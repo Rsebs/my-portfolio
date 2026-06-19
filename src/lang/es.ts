@@ -1,4 +1,17 @@
 export default {
+  // Navigation
+  nav_about: 'Sobre mí',
+  nav_skills: 'Habilidades',
+  nav_experience: 'Experiencia',
+  nav_projects: 'Proyectos',
+  nav_education: 'Formación',
+
+  // Skill Categories
+  cat_frontend: 'Desarrollo Frontend',
+  cat_backend: 'Desarrollo Backend',
+  cat_database_cloud: 'Bases de Datos & Cloud',
+  cat_tools: 'Herramientas',
+
   // Profile / General
   developer_full_stack_of_software: 'Desarrollador Full-Stack de Software',
   about_me: 'Sobre mí',
@@ -13,15 +26,15 @@ export default {
   experience_title_psicol: 'Desarrollador de software fullstack',
   experience_date_psicol: 'Diciembre 2023 - Abril 2026',
   experience_desc_psicol:
-    'Principalmente dando mantenimiento a un sistema legacy en PHP puro y también desarrollando proyectos API en PHP Laravel con conexión a un frontend en Vue.js.',
+    'Desarrollador Full Stack especializado en PHP y Laravel, con experiencia en sistemas legacy, integración de APIs, Azure, Power BI Embedded, Docker y automatización de procesos. Enfocado en construir soluciones escalables, optimizar el rendimiento y resolver problemas técnicos complejos.',
   experience_title_neurologico: 'Desarrollador Pasante',
   experience_date_neurologico: 'Marzo 2023 - Noviembre 2023',
   experience_desc_neurologico:
-    'Desarrollo de aplicaciones con JAVA Spring Boot. Realizando mantenimiento a sistemas legacy y desarrollando nuevas funcionalidades.',
+    'Desarrollador de aplicaciones web utilizando Java Spring Boot y MySQL, participando en la construcción de soluciones backend, desarrollo de funcionalidades y gestión de bases de datos. Experiencia en el diseño de APIs, lógica de negocio y mantenimiento de aplicaciones enfocadas en rendimiento y confiabilidad.',
   experience_title_freelance: 'Desarrollador Web Freelance',
   experience_company_freelance: 'Independiente',
   experience_desc_freelance:
-    'Desarrollo de aplicaciones web personalizadas y sitios corporativos. Especializado en la creación de interfaces responsivas con Vue.js y consumo de APIs REST.',
+    'Desarrollador Web Freelance especializado en la creación de aplicaciones web y sitios corporativos a medida. Experiencia en el desarrollo de interfaces modernas y responsivas, integración de APIs REST y construcción de soluciones enfocadas en rendimiento, usabilidad y escalabilidad.',
 
   // Projects
   projects: 'Proyectos',
@@ -40,6 +53,5 @@ export default {
   education_degree_pascual: 'Tecnólogo en Análisis y Desarrollo de Software',
   education_desc_pascual: 'Desarrollo en C#, Python, SQL. En curso',
   education_degree_politecnico: 'Técnico en Desarrollo de Software',
-  education_desc_politecnico:
-    'Desarrollo de software con Java, Spring Boot, Python y JavaScript.',
+  education_desc_politecnico: 'Desarrollo de software con Java, Spring Boot, Python y JavaScript.',
 }

@@ -1,30 +1,27 @@
 <template>
-  <h2>{{ $t('education') }}</h2>
+  <div>
+    <h2>{{ $t('education') }}</h2>
 
-  <div class="my-4">
-    <v-list bg-color="transparent" lines="two">
-      <v-list-item v-for="(item, i) in educationList" :key="i" class="mb-4 pa-0">
-        <template v-slot:prepend>
-          <div class="me-4">
-            <v-avatar color="purple-darken-4" size="large">
-              <v-icon :icon="item.icon" color="purple-lighten-4"></v-icon>
-            </v-avatar>
+    <v-row class="mt-4">
+      <v-col v-for="(item, i) in educationList" :key="i" cols="12" md="6" class="mb-4">
+        <v-card class="glass-card pa-6 h-100 education-card d-flex align-start ga-4">
+          <v-avatar color="secondary" variant="tonal" size="large" class="rounded-lg">
+            <v-icon :icon="item.icon" color="secondary" size="large"></v-icon>
+          </v-avatar>
+          <div>
+            <h3 class="text-h6 font-weight-black text-white mb-1">
+              {{ item.school }}
+            </h3>
+            <div class="text-subtitle-1 text-primary font-weight-bold mb-2">
+              {{ $t(item.degreeKey) }}
+            </div>
+            <p class="text-body-2 text-grey-lighten-2 mb-0" style="line-height: 1.6">
+              {{ $t(item.descriptionKey) }}
+            </p>
           </div>
-        </template>
-
-        <v-list-item-title class="font-weight-bold text-h6 mb-1">
-          {{ item.school }}
-        </v-list-item-title>
-
-        <v-list-item-subtitle class="text-body-1 text-high-emphasis mb-1">
-          {{ $t(item.degreeKey) }}
-        </v-list-item-subtitle>
-
-        <v-list-item-subtitle class="text-body-2 text-medium-emphasis">
-          {{ $t(item.descriptionKey) }}
-        </v-list-item-subtitle>
-      </v-list-item>
-    </v-list>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -53,3 +50,12 @@ const educationList = ref<Education[]>([
   },
 ])
 </script>
+
+<style scoped>
+.education-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+.education-card:hover {
+  transform: translateY(-4px) !important;
+}
+</style>

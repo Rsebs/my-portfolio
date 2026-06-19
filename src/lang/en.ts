@@ -1,4 +1,17 @@
 export default {
+  // Navigation
+  nav_about: 'About me',
+  nav_skills: 'Skills',
+  nav_experience: 'Experience',
+  nav_projects: 'Projects',
+  nav_education: 'Education',
+
+  // Skill Categories
+  cat_frontend: 'Frontend Development',
+  cat_backend: 'Backend Development',
+  cat_database_cloud: 'Databases & Cloud',
+  cat_tools: 'Tools & Version Control',
+
   // Profile / General
   developer_full_stack_of_software: 'Software Full-Stack Developer',
   about_me: 'About me',
@@ -13,15 +26,15 @@ export default {
   experience_title_psicol: 'Fullstack Software Developer',
   experience_date_psicol: 'December 2023 - April 2026',
   experience_desc_psicol:
-    'Mainly maintaining a legacy system in pure PHP and also developing API projects in PHP Laravel with connection to a Vue.js frontend.',
+    'Full-stack developer specializing in PHP and Laravel, with experience in legacy systems, API integration, Azure, Power BI Embedded, Docker, and process automation. Focused on building scalable solutions, optimizing performance, and solving complex technical problems.',
   experience_title_neurologico: 'Intern Developer',
   experience_date_neurologico: 'March 2023 - November 2023',
   experience_desc_neurologico:
-    'Application development with JAVA Spring Boot. Maintaining legacy systems and developing new features.',
+    'Web application developer using Java Spring Boot and MySQL, involved in building backend solutions, developing features, and managing databases. Experience in designing APIs, business logic, and maintaining applications with a focus on performance and reliability.',
   experience_title_freelance: 'Freelance Web Developer',
   experience_company_freelance: 'Freelance',
   experience_desc_freelance:
-    'Development of customized web applications and corporate websites. Specialized in creating responsive interfaces with Vue.js and consuming REST APIs.',
+    'Freelance Web Developer specializing in the creation of custom web applications and corporate websites. Experience in developing modern, responsive interfaces, integrating REST APIs, and building solutions focused on performance, usability, and scalability.',
 
   // Projects
   projects: 'Projects',
